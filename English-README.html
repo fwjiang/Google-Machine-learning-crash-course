@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>machine-learning-crash-course</h1>
+<p>machine-learning-crash-course from google </p>
+<h2>Introduction to Machine Learning</h2>
+<blockquote>
+<p>Learning Objectives</p>
+<p>Recognize the practical benefits of mastering machine learning</p>
+<p>Understand the philosophy behind machine learning</p>
+</blockquote>
+<ul>
+<li>machine learning can help us solve problems more efficiently and make it possible to answer questions that can not be answered before;</li>
+<li>the concept behind machine learning can help us build a more complicated and sound and logical mind when facing other problems;</li>
+</ul>
+<h2>Framing</h2>
+<blockquote>
+<p>This module investigates how to frame a task as a machine learning problem, and covers many of the basic vocabulary terms shared across a wide range of machine learning (ML) methods.</p>
+<p>Learning Objectives</p>
+<ul>
+<li>Refresh the fundamental machine learning terms.</li>
+<li>Explore various uses of machine learning.</li>
+</ul>
+</blockquote>
+<ul>
+<li>supervised ML</li>
+</ul>
+<blockquote>
+<p>Supervised ML models use the input to produce useful predictions on never-before-seen data;</p>
+<p>When train supervised ML, we need feed the model with labels(y) and features(x), example(实例) is a particular instance of data, labeled example has {features, label}, that's (x, y), used to train the model, unlabeled example has {features, ?}, that's (x, ?), used for making predictions.</p>
+<p>And the model is something that maps examples to predicted labels (y'), defined by internal parameters, which are learned (where the word &quot;machine learning&quot; comes from).</p>
+</blockquote>
+<ul>
+<li>Key ML Terminology</li>
+</ul>
+<blockquote>
+<ul>
+<li>supervised ML: ML systems learn how to combine input to produce useful predictions on never-before-seen data;</li>
+<li>Labels: A label is the thing we're predicting - the <code>y</code> variable in simple linear regression. </li>
+<li>
+Features: a feature is an input variable - the <code>x</code> variable in simple linear regression, a simple ML might use a single feature, while a more sophisticated ML could use millions of features, specified as $\left{ x<em>1, x</em>2, … , x_n \right}$, in the spam detector example, the features could include the following:
+<ul>
+<li>words in the email text</li>
+<li>sender's address</li>
+<li>time of day the email was sent</li>
+<li>Email contains the phrase &quot;one weird trick&quot;</li>
+</ul>
+</li>
+<li>Training: means creating or learning the model, that is you show the model labeled examples and enable the model to gradually learn th relationships between features and labels;</li>
+<li>inference: means applying the trained model to unlabeled examples, that is use the trained model to make useful predictions (y').</li>
+<li>Regression: a regression model predicts continuous values;</li>
+<li>Classification: a classification model predicts discrete values;</li>
+</ul>
+</blockquote>
+<h2>Descending into ML</h2>
+<blockquote>
+<p>Linear regression is a method for finding the straight line or hyperplane that best fits a set of points.</p>
+<p>Learning Objectives</p>
+<ul>
+<li>Refresh your memory on line fitting.</li>
+<li>Relate weights and biases in machine learning to slope and offset in line fitting.</li>
+<li>Understand &quot;loss&quot; in general and squared loss in particular.</li>
+</ul>
+</blockquote>
+<p>we use <code>loss</code> to evaluate the performance of our trained models, the most common loss is $L<em>2 Loss ( also \  known \ as \ squared \ loss)$ as bellow:
+$$
+L</em>2 Loss = \sum_{(x, y)} (y - prediction(x))<em>{}^{2} = \sum (y - y')</em>{}^2
+$$</p>
+<p>$$
+MSE = Mean \ Square \ Error = \frac 1 N \sum<em>{(x, y)} (y - y')</em>{}^2
+$$</p>
+<p>training a model simply means learning good values for all the weights and the bias from labeled examples. in supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimize loss, this process is called <strong><em>empirical risk minimization</em></strong>.</p>
+<p>loss is the <strong><em>penalty</em></strong> for a bad prediction, that is loss is a number indicating how bad [[the model's predictions was on a single example.</p>
+<p>Although MES is commonly-used in machine learning, it's neither the only practical loss function nor the best loss function for all circumstances.</p>
+<h2>Reducing loss</h2>
+<ul>
+<li>gradient decent</li>
+</ul>
+<p><img src="./images/gradient_descent.png" /></p>
+<ul>
+<li>Weight initialize</li>
+</ul>
+<blockquote>
+<p>For convex (like of a bowl shape) problems, weights can start anywhere (say, all 0's), for there is just one minimum.</p>
+<p>For non-convex problems (like of an egg crate), there exists more than one minimum, the final results strongly depend on the initial values of weights.</p>
+</blockquote>
+<ul>
+<li>SGD &amp; Mini-Batch Gradient Descent</li>
+</ul>
+<blockquote>
+<p>We could compute <strong><em>gradient</em></strong> over entire data set on each step, but this turns out to be unnecessary and less efficient, a <strong><em>gradient</em></strong> is a vector of partial derivatives;</p>
+<p><strong><em>Problem: what is the gradient vector of model: $y = wx + b$</em></strong>.</p>
+<p>We can compute gradient on small data set, for example, we get a new random sample on every step;</p>
+<ul>
+<li><strong><em>Sthochastic Gradient Descent</em></strong>: one example at a time, and the term <strong><em>stochastic</em></strong> indicates that the one example comprising each batch is chosen at random;</li>
+<li><strong><em>Mini-Batch Gradient Descent</em></strong>: we get a small data sample (10-1000 examples) every time, in this way, the loss and gradients are averaged over the batch, which would be more stable;</li>
+</ul>
+</blockquote>
+<ul>
+<li>learning rate</li>
+</ul>
+<blockquote>
+<p>The gradient vector has both a direction and a magnitude, gradient descent algorithms multiply the gradient by a scalar known as the <strong><em>learning rate</em></strong> ( also sometimes called <strong><em>step size</em></strong> ) to determine the next point. </p>
+<p><strong><em>hyperparamters</em></strong> are the knobs or paramters that programmers set and tweak in machine learning algorithms, learning rate is kind of a hyper parameters. </p>
+<p>the ideal learning rate in one-dimension is $\frac 1 {f(x)_{}^{''}}$, that's the inverse of the second derivative of f(x) as x;</p>
+<p>the ideal learning rate in 2-dimension or more dimensions is the inverse of the <strong><em>hessian</em></strong>, that is matrix of second partial derivative;</p>
+</blockquote>
+<h2>First Steps with TF</h2>
+<blockquote>
+<p>Learning Objectives</p>
+<ul>
+<li>Learn how to create and modify tensors in TensorFlow.</li>
+<li>Learn the basics of pandas.</li>
+<li>Develop linear regression code with one of TensorFlow's high-level APIs.</li>
+<li>Experiment with learning rate.</li>
+</ul>
+</blockquote>
+<p><img src="images/tf_api.png" alt="tf_api.png" /></p>
+<p>TF consists of the following two components:</p>
+<ul>
+<li>a graph protocol buffer</li>
+<li>a runtime that executes the (distributed) graph</li>
+</ul>
+<p>These two components are analogous to the java compiler and the JVM, just as the JVM is implemented on multiple hardware platforms, so is TF-CPUs and TF-GPUs.</p>
+<ul>
+<li>
+Common hyperparameters in TF
+<ul>
+<li><strong><em>steps</em></strong>: total number of training iterations, one step calculates the loss from one batch and uses that value to modify the model's weights once;</li>
+<li><strong><em>batch size</em></strong>: which is the number of examples (chosen at random) for a single step, for example the batch size for SGD is 1;</li>
+<li><strong><em>periods</em></strong>: the granularity of reporting, modifying periods does not alter what your model learns.</li>
+</ul>
+</li>
+</ul>
+<p>$$
+total \ number \ of \ trained \ examples = batch \ size * steps
+$$</p>
+<p>$$
+number \ of \ training \ examples \ in \ each \  period = \frac {batch \ size * steps} {periods}
+$$</p>
+<h2>Generalization</h2>
+<p>generalization refers to your model's ability to adapt properly to new, previously unseen data, drawn from the same distribution as the one used to create the model.</p>
+<p><img src="images/generalization.png" /></p>
+<p><img src="images/generalization2.png" /></p>
+<p><img src="images/generalization3.png" /></p>
+<p><img src="images/generalization4.png" /></p>
+<p>the fundamental tension of machine learning is between fitting our data well, but also fitting the data as simply as possible.</p>
+<p>the following 3 basic assumptions guide generalization:</p>
+<ul>
+<li>we draw examples <strong><em>independently and identically</em></strong> at random from the distribution, in other words, examples don't influence each other;</li>
+<li>the distribution is <strong><em>stationary</em></strong>, that's the distribution doesn't change within the data set;</li>
+<li>we draw examples from partitions from the same distribution;</li>
+</ul>
+<p>In practice, we sometimes violate these assumptions, for example:</p>
+<ul>
+<li>consider a model that chooses ads to display, the iid assumption would be violated if the model bases its choice of ads, in part, on what ads the user has previously seen;</li>
+<li>consider a data set that contains retail sales information for a year, user's purchase change seasonally, which would violate stationarity;</li>
+</ul>
+<h2>Training and Test Sets</h2>
+<p>a test set is a data set used to evaluate the model developed from a training set.</p>
+<p><img src="images/train_test_1.png" /></p>
+<p><img src="images/train_test_2.png" /></p>
+<p>Make sure that your test set meets the following 2 conditions:</p>
+<ul>
+<li>is large enough to yield statistically meaningful results;</li>
+<li>is representative of the data set as a whole, in other words, don't pick a test set with different characteristics than the training set;</li>
+</ul>
+<h2>Validation: Check Your Intuition</h2>
+<p><strong><em>partitioning a data set into a training set and test set lets you judge whether a given model will generalize well to new data. However, using only two partitions maybe insufficient when doing many rounds of hyperparameter tuning. we need a validation set in a partitioning shcema</em></strong></p>
+<p><img src="images/validation1.png" /></p>
+<p><img src="images/validation2.png" /></p>
+<p><img src="images/validation3.png" /></p>
+<p>so the best work flow for training:</p>
+<ul>
+<li>Pick the model that does best on the validation set</li>
+<li>Double-check that model against the test set</li>
+</ul>
+<p>this is a better workflow because it creates fewer exposures to the test set.</p>
+<h2>Representation</h2>
+<p>A machine learning model can't directly see, hear or sense input examples. Instead you must create a representation of the data to provide the model with a useful vantage point into the data's key qualities. that is, in order to train a model, you must choose the set of features that best represent the data.</p>
+<blockquote>
+<p>Learning Objectives</p>
+<ul>
+<li>Map fields from logs and protocol buffers into useful ML features.</li>
+<li>Determine which qualities comprise great features.</li>
+<li>Handle outlier features.</li>
+<li>Investigate the statistical properties of a data set.</li>
+<li>Train and evaluate a model with tf.estimator.</li>
+</ul>
+</blockquote>
+<p><img src="images/representation_1.png" /></p>
+<p><img src="images/representation_2.png" /></p>
+<p><img src="images/representation_3.png" /></p>
+<p><img src="images/representation_4.png" /></p>
+<p><img src="images/representation_5.png" /></p>
+<p><img src="images/representation_6.png" /></p>
+<p><img src="images/representation_7.png" /></p>
+<p><img src="images/representation_8.png" /></p>
+<p>the following are about cleaning data.</p>
+<ul>
+<li><strong><em>scaling feature values</em></strong>:</li>
+</ul>
+<blockquote>
+<p>scaling means converting floating-point feature values from their natural range into a standard range (for example, 0 to 1 or -1 to +1). if a feature set consists of only a single feature, then scaling provides little to no practical benefit. If, however, a feature set consists of multiple features, then feature scaling provides the following benefits:
+  - helps gradient descent converge more quickly;
+  - Helps avoid the &quot;nan trap&quot;, in which one number in the model becomes a nan and due-to math operations-every other number in the model also eventually becomes a nan;
+  - helps the model learn appropriate weights for each feature, without feature scaling, the model will pay too much attention to the features having a wider range;</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><em>handling extreme outliers</em></strong>:</p>
+<ul>
+<li>Apply log function on the features</li>
+<li>If still exists outliers, use <strong><em>cap</em></strong> way.</li>
+</ul>
+</li>
+<li>
+<p><strong><em>binning</em></strong>:</p>
+</li>
+</ul>
+<blockquote>
+<p>that is do not use the raw values of a feature, but map the raw value to a discrete group, and use the group number as the feature values. just something like quantile method.</p>
+</blockquote>
+<ul>
+<li><strong><em>scrubbing</em></strong>:</li>
+</ul>
+<blockquote>
+<p>in real-life, many examples in data sets are unreliable due to one or more of the following:</p>
+<ul>
+<li>omitted values: </li>
+<li>duplicate examples:</li>
+<li>bad labels:</li>
+<li>bad feature values:</li>
+</ul>
+</blockquote>
+<h2>Feature Crosses</h2>
+<p>A feature cross is a synthetic feature formed by multiplying (crossing) two or more features, crossing combinations of features can provide predictive abilities beyond what those features can provide individually.</p>
+<blockquote>
+<p>Learning Objectives</p>
+<ul>
+<li>Build an understanding of feature crosses.</li>
+<li>Implement feature crosses in TensorFlow.</li>
+</ul>
+</blockquote>
+<p><img src="images/feature_cross_1.png" /></p>
+<p><img src="images/feature_cross_2.png" /></p>
+<p><img src="images/feature_cross_3.png" /></p>
+<h2>Regularization for Simplicity: Playground Exercise</h2>
+<p>regularization means penalizing the complexity of a model to reduce overfitting.</p>
+<p><img src="images/l2_1.png" /></p>
+<p><img src="images/l2_2.png" /></p>
+<p><img src="images/l2_3.png" /></p>
+<p><img src="images/l2_4.png" /></p>
+<p><img src="images/l2_5.png" /></p>
+<p>The <strong><em>generalization curve</em></strong> shows the loss for both the training set and validation set against the number of training iterations.</p>
+<p><img src="images/l2_6.png" /></p>
+<p>The model's generalization curve above means that the model is <strong><em>overfitting</em></strong> to the data in the training set. This may be caused by a complex model, we use <strong><em>regularization</em></strong> to prevent overfitting, traditional way, we optimize a model by find the minimize loss, as bellow formula show:
+$$
+minimize(Loss(data | model))
+$$
+But this would not consider the complexity of the model, so we use a so-called <strong><em>structural risk minimization</em></strong> way to optimize a model:
+$$
+minimize(Loss(data | model)   +  complexity(model))
+$$</p>
+<ul>
+<li>the loss term: measures how well the model fits the data</li>
+<li>the regularization term: measures the model's complexity</li>
+</ul>
+<p>this course focuses on two common ways to think of model complexity:</p>
+<ul>
+<li>model complexity as a function of the weights of all the features in the model</li>
+<li>model complexity as a function of the total number of features with nonzero weights</li>
+</ul>
+<p>We can quantify complexity using the <strong><em>L2-regularization</em></strong> formula, which defines the regularization term as the sum of the squares of all the feature weights:
+$$
+L2 \ regularization \ term = ||w||<em>{2}^{2} = w<em>1^2 + w</em>2^2 + ... + w</em>n^2
+$$
+Practically, model developers tune the overall impact of the regularization term by multiplying its value by a scalar known as <strong><em>lambda (or the regularization rate)</em></strong>, that's the formula bellow:
+$$
+minimize(Loss(data | model)   +  \lambda * complexity(model))
+$$
+performing L2 regularization has the following effect on a model:</p>
+<ul>
+<li>encourages weight values toward 0</li>
+<li>encourages the mean of the weights toward 0, with a normal (bell-shaped or Gaussian) distribution</li>
+</ul>
+<p>Increasing the lambda value strengthens the regularization effect, for example, the histogram of weights for a high value of lambda might look as bellow:</p>
+<p><img src="images/lambda_1.png" /></p>
+<p>lowering the value of lambda tends to yield a flatter histogram, like bellow:</p>
+<p><img src="images/lambda_2.png" /></p>
+<p>When choosing a lambda value, the goal is to strike the right balance between simplicity and a training-data fit:</p>
+<ul>
+<li>if your lambda value is too high, your model will be simple, but you run the risk of underfitting your data, your model won't learn enough about the training data to make useful predictions;</li>
+<li>if your lambda value is too low, your model will be more complex, and you run the risk of overfitting your data, your model will learn too much about the particularities of the training data, and won't be able to generalize to new data;</li>
+</ul>
+<p>there's a close connection between learning rate and lambda, strong L2 regularization values tend to driver feature weights closer to 0. Lower learning rates(with early stopping) often produce the same effect because the steps away from 0 aren't as large. Consequently, tweaking learning rate and lambda simultaneously may have confounding effects.</p>
+<p><strong><em>early stopping</em></strong> means ending training before the model fully reaches convergence. in practice, we often end up with some amount of implicit early stopping when training in an online fashion. that's some new trends just haven't had enough data yet to converge.</p>
+<p>the effects from changes to regularization parameters can be confounded with the effects from changes in learning rate or number of iterations. one useful practice is to give yourself a high enough number of iterations that early stopping doesn't play into things.</p>
+<h2>Logistic Regression</h2>
+<blockquote>
+<p>instead of predicting exactly 0 or 1, <strong><em>logistic regression</em></strong> generates a probability —— a value between 0 and 1.</p>
+<p>Learning Objectives</p>
+<ul>
+<li>Understand logistic regression.</li>
+<li>Explore loss and regularization functions for logistic regression.</li>
+</ul>
+</blockquote>
+<p><img src="images/log_1.png" /></p>
+<p><img src="images/log_2.png" /></p>
+<p><img src="images/log_3.png" /></p>
+<p><img src="images/log_4.png" /></p>
+<p><img src="images/log_5.png" /></p>
+<p><img src="images/log_6.png" /></p>
+<p>Many problems require a probability estimate as output, logistic regression is an extremely efficient mechanism for calculating probabilities. in many cases, you'll map the logistic regression output into the solution to a binary classification problem, in which the goal is to correctly predict one of two possible labels. you might be wondering how a logistic regression model can ensure output that always falls between 0 and 1. a <strong><em>sigmoid function</em></strong> defined as follows, produces output having those same characteristics:
+$$
+y = \frac 1 {1 + e_{}^{-x}}
+$$
+<img src="images/log_7.png" /></p>
+<p>if <em>x</em> represents the output of the linear layer of a model trained with logistic regression, the sigmoid(x) will yield a probability between 0 and 1.</p>
+<p>the loss function for linear regression is squared loss, the loss function for logistic regression is <strong><em>log loss</em></strong>, which is defined as follows:
+$$
+LogLoss = \sum_{x, y} -y * log(y') - (1-y) * log(1 - y')
+$$</p>
+<ul>
+<li>y is the label in a labeled example, since this is logistic regression, every value of y must either be 0 or 1;</li>
+<li>y' is the predicted value(somewhere between 0 and 1), given the set of features in x;</li>
+</ul>
+<h2>Classification</h2>
+<p>this module shows how logistic regression can be used for classification tasks, and explores how to evaluate the effectiveness of classificatin models.</p>
+<blockquote>
+<p>Learning Objectives</p>
+<ul>
+<li>Evaluating the accuracy and precision of a logistic regression model.</li>
+<li>Understanding ROC Curves and AUCs.</li>
+</ul>
+</blockquote>
+<p><img src="images/calss_1.png" /></p>
+<p><img src="images/calss_2.png" /></p>
+<p><img src="images/calss_3.png" /></p>
+<p><img src="images/calss_4.png" /></p>
+<p><img src="images/calss_5.png" /></p>
+<p><img src="images/calss_6.png" /></p>
+<p><img src="images/calss_7.png" /></p>
+<p><img src="images/calss_8.png" /></p>
+<p><img src="images/calss_9.png" /></p>
+<p><img src="images/calss_10.png" /></p>
+<p>Logistic regression returns a probability. you can use the returned probability directly or convert the returned probability to a binary value.</p>
+<p><img src="images/calss_11.png" /></p>
+<p>$$
+accuracy = \frac {TP + TN}{TP + TN + FP + FN}
+$$
+Sometimes use <strong><em>accuracy</em></strong> may ignore some detail and import problem on the model it self, here is an example bellow:</p>
+<p><img src="images/calss_12.png" /></p>
+<p>in the photo above, the <strong><em>accuracy</em></strong> of this model is (1 + 90) / (1 + 90 + 1 + 8) = 0.91. which seems great. But let's do a closer analysis of positives and negatives to <strong><em>gain more insight into our model's performance</em></strong>:</p>
+<ul>
+<li>Of the 100 tumor examples, 91 are benign (90 TN and 1 FP) and 9 are maligant(1 TP and 8 FN)</li>
+<li>of the 91 benign tumors, the model correctly identifies 90 as benign, that's great; however, of the 9 malignant tumors, the model only correctly identifies 1 as malignant - a terrible outcome, as 8 out of 9 malignancies go undiagnosed.</li>
+</ul>
+<p>while 91% accuracy may seem good at first glance, another tumor-classifier model that always predicts benign would achieve the exact same accuracy (0.91)  on our example. in other words, our model is no better than one that has zero predictive ability to distinguish malignant tumors from benign tumors.</p>
+<p>Accuracy alone doesn't tell the full story when you're working with a <strong><em>class-imbalanced data set</em></strong>, like this one, where there is a significant disparity between the number of positive and negative labels.</p>
+<p>so we derived some other evaluate method to value a model.</p>
+<p><strong><em>precision</em></strong> answer the question <code>what proportion of positive identifications was actually correct?</code>, and is defined as follows:
+$$
+precision = \frac {TP}{TP + FP}
+$$
+in the above model, the precision is (1)/(1 + 1) = 50%，our model has a precision of 0.5, in other words, when it predicts a tumor is malignant, it is correct 50% of the time. </p>
+<p><strong><em>recall</em></strong> answer the question <code>what proportion of actual positives was identified correctly</code>, is defined as follows:
+$$
+recall = \frac {TP}{TP + FN}
+$$
+our model has a recall of (1)/(1+8) = 0.11, in other words, it correctly identifies 11% of all malignant tumors.</p>
+<p>to fully evaluate the effectiveness of a model, you must examine both precision and recall. But precision and recall are often in tension, that's improving precision typically reduces recall and vice versa. so sometimes we use <strong><em>F1 score</em></strong> to evaluate a model, which rely on both precision and recall.</p>
+<p>Besides precision, recall and F1 score, we also have 2 powerful tool to evaluate a model, that's <strong><em>ROC curve</em></strong> and <strong><em>AUC</em></strong>.</p>
+<p>An <strong><em>ROC curve (receiver operating characteristic curve)</em></strong> is a graph showing the performance of a classification model at all classification thresholds. this curve plots two parameters:</p>
+<ul>
+<li>True Positive Rate</li>
+<li>False Positive Rate</li>
+</ul>
+<p><strong><em>True positive rate(TPR)</em></strong> is a synonym for recall and is therefore defined as follows:
+$$
+TPR = \frac {TP}{TP + FN}
+$$
+<strong><em>False positive rate(FPR)</em></strong> is defined as follows:
+$$
+FPR = \frac {FP}{FP + TN}
+$$
+an roc curve plots TPR vs FPR at different classification thresholds. lowering the classification threshold classifies more items as positive, thus increasing both FP and TP, the following figure shows a typical ROC curve:</p>
+<p><img src="images/class_13.png" /></p>
+<p>to compute the points in an ROC curve, we could evaluate a logistic regression model many times with different classification thresholds, but this would be inefficient. But there'is an efficient and sorting-based algorithm that can provide this information for us, called <strong><em>AUC</em></strong>.</p>
+<p><strong><em>AUC</em></strong> stands for <code>area under the ROC curve</code>, that's measures the entire two-dimensional area underneath the entire ROC curve from (0, 0) to (1, 1).</p>
+<p><img src="images/class_14.png" /></p>
+<p>AUC provides an aggregate measure of performance across all possible classification thresholds. One way of interpreting AUC is as the probability that the model ranks a random positive example more highly than a random negative example.</p>
+<p>for more information, check bellow:</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/30643044">精确率、召回率、F1 值、ROC、AUC 各自的优缺点是什么？</a></li>
+</ul>
+<p>logistic regression predictions should be unbiased, that's <code>average of predictions should equal to average of observations</code>, and <strong><em>prediction bias</em></strong> is a quantity that measures how far apart those two averages are, that is:
+$$
+prediction \ bias = average \ of \ predictions - average \ of \ labels \ in \ data \ set
+$$
+A significant nonzero prediction bias tells you there is a bug somewhere in your model, as it indicates that the model is wrong about how frequently positive labels occur.</p>
+<p><code>For example, let's say we know that on average, 1% of all emails are spam. If we don't know anything at all about a given email, we should predict that it's 1% likely to be spam. Similarly, a good spam model should predict on average that emails are 1% likely to be spam. (In other words, if we average the predicted likelihoods of each individual email being spam, the result should be 1%.) If instead, the model's average prediction is 20% likelihood of being spam, we can conclude that it exhibits prediction bias.</code></p>
+<p>possible root causes of prediction bias are:</p>
+<ul>
+<li>Imcomplete feature set</li>
+<li>noisy data set</li>
+<li>buggy pipeline </li>
+<li>Biased training sample</li>
+<li>overly strong regularization</li>
+</ul>
+<h2>Regularization for Sparsity</h2>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
